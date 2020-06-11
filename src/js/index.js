@@ -96,6 +96,14 @@ function Card() {
 	);
 }
 
+function Footer(property) {
+	return (
+		<div className="bg-dark text-white text-center p-4">
+			&#169; {property.curYear} Bootstrap Website
+		</div>
+	);
+}
+
 ReactDOM.render(
 	<>
 		<Navbar />
@@ -108,6 +116,7 @@ ReactDOM.render(
 				<Card />
 			</div>
 		</div>
+		<Footer curYear={new Date().getUTCFullYear()} />
 	</>,
 	document.querySelector("#app")
 );
